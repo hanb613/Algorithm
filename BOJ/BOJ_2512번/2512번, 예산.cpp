@@ -18,7 +18,7 @@ int arr[10001];
 int result;
 
 int cal(int mid) {
-	lli ret = 0;
+	int ret = 0;
 
 	for (int i = 0; i < n; i++) {
 		if (arr[i] > mid) {
