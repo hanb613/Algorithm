@@ -35,9 +35,9 @@ public class Solution {
 			return;
 		}
 		
-		move(k+1, l+tmp[k], r);
+		move(k+1, l+tmp[k], r); // 왼쪽에 추 올리기
 		
-		if(r + tmp[k] <= l) {
+		if(r + tmp[k] <= l) { // 오른쪽에 추를 올렸을 때 왼쪽보다 총합이 작다면
 			move(k+1, l, r + tmp[k]);	
 		}
 	}
