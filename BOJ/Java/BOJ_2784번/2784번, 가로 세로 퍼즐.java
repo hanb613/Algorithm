@@ -14,14 +14,10 @@ public class Main {
 			str[i] = br.readLine();
 		}
 		
-		Arrays.sort(str);
+		result = new String[3];
+		visit = new boolean[6];
 		
-		for(int i=0; i<6; i++) {
-			result = new String[3];
-			visit = new boolean[6];
-			
-			Solution(0, i);
-		}
+		Solution(0);
 		
 		System.out.println(0);
 	}
@@ -53,6 +49,7 @@ public class Main {
 				}
 			}
 		}
+		
 		if(cnt==6) {
 			for(int i=0; i<3; i++) {
 				System.out.println(result[i]);
@@ -62,23 +59,21 @@ public class Main {
 		}
 	}
 	
-	public static void Solution(int k, int m) {
+	public static void Solution(int k) {
 		if(k==3) {
 			check();
 			return;
 		}
 		
-		else {
-			for(int i=0; i<6; i++) {
-				int idx = (m+i)%6;
-				if(!visit[idx]) {
-					visit[idx]= true;
-					result[k] = str[idx];
-					Solution(k+1, 0);
-					visit[idx]= false;
-				}	
-			}
+		for(int i=0; i<6; i++) {
+			if(!visit[i%6]) {
+				visit[i%6]= true;
+				result[k] = str[i%6];
+				Solution(k+1);
+				visit[i%6]= false;
+			}	
 		}
+		
 	}
 }
 
