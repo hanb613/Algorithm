@@ -33,6 +33,7 @@ public class Main {
 				else result+=(a[i]/c)+1;
 			}
 		}
+
 		System.out.println(result);
 	}
 }
