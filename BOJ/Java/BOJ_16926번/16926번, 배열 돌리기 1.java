@@ -7,7 +7,7 @@ public class Main {
     static int n, m, r, minL, result;
     static int[][] arr, tmpArr;
     
-    static int[] dx = {1, 0, -1, 0};
+    static int[] dx = {1, 0, -1, 0}; // 하 좌 상 우
     static int[] dy = {0, 1, 0, -1};
     
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -32,11 +32,11 @@ public class Main {
         
         for(int k=0; k<r; k++) {
         	copyArr(tmpArr, arr);
-        	for(int i=0; i<minL/2; i++) {
+        	for(int i=0; i<minL/2; i++) { // 회전 해야되는 레이어
         		int x=i, y=i;
         		
         		int dir=0;
-        		while(dir<4) {
+        		while(dir<4) { // '하 좌 상 우'순으로 움직이다가 범위 벗어나면 방향 바꾸기
         			int nx = x+dx[dir];
         			int ny = y+dy[dir];
         			
