@@ -9,7 +9,7 @@ public class Main {
     static int w, h, result;
     static int[][] arr;
     static boolean[][] visit;
-    static int[] dx = {-1, 0, 1, 0, 1, 1, -1, -1};
+    static int[] dx = {-1, 0, 1, 0, 1, 1, -1, -1}; // 상 하 좌 우, 대각선
     static int[] dy = {0, -1, 0, 1, 1, -1, 1, -1};
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -35,7 +35,10 @@ public class Main {
 
             for(int i=0; i<w; i++) {
                 for(int j=0; j<h; j++) {
-                    if(!visit[i][j] && BFS(i, j)) result++;
+                    if(arr[i][j]==1 && !visit[i][j]) { // 방문하지 않은 섬이면 BFS 돌리고 result++
+                    	BFS(i, j);
+                    	result++; 
+                    }
                 }
             }
 
@@ -43,13 +46,11 @@ public class Main {
         }
     }
 
-    private static boolean BFS(int x, int y) {
+    private static void BFS(int x, int y) {
         Queue<Pair> q = new LinkedList<Pair>();
 
-        int cnt=0;
         q.add(new Pair(x, y));
         visit[x][y] = true;
-        if(arr[x][y]==1) cnt++;
 
         while(!q.isEmpty()) {
             Pair p = q.poll();
@@ -57,17 +58,13 @@ public class Main {
                 int nx = p.x+dx[i];
                 int ny = p.y+dy[i];
 
-                if(nx<0 || ny<0 || nx>=w || ny>=h || visit[nx][ny]) continue;
-                if(arr[nx][ny]==1) {
+                if(nx<0 || ny<0 || nx>=w || ny>=h || visit[nx][ny]) continue; // 범위 넘어가거나, 방문 했던 섬이면 X
+                if(arr[nx][ny]==1) { // 섬이면 큐에 넣기
                     visit[nx][ny]=true;
                     q.add(new Pair(nx, ny));
-                    cnt++;
                 }
             }
         }
-
-        if(cnt!=0) return true;
-        else return false;
     }
 
     private static class Pair{
