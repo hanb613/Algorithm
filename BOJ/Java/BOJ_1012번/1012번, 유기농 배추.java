@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-import javax.swing.plaf.synth.SynthSplitPaneUI;
-
 public class Main {
 	
 	static int tc, n, m, k, x, y, result;
