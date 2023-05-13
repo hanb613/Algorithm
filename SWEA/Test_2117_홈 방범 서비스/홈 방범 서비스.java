@@ -7,7 +7,7 @@ import java.io.*;
  * 손해를 보지 않고 많은 집에 서비스 제공
  * */
 
-public class Main {
+public class Solution {
 	
 	static int tc, n, m, result;
 	static int[][] arr;
