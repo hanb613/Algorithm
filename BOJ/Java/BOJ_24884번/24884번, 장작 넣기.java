@@ -35,7 +35,7 @@ public class Main {
 
 		// 인접한 모닥불 개수 세기 
 		for (int i = 0; i < n; i++) {
-			if (time > 1 && i==idx) {  // 이전에 장작 넣은 부분
+			if (time>1 && i==idx) {  // 이전에 장작 넣은 부분
 				fireArr[i] = 3;
 				continue;
 			}
