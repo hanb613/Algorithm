@@ -21,7 +21,7 @@ public class Main {
         	} else if(str.charAt(i)=='H') {
         		h+=w;
         	} else if(str.charAt(i)=='E') {
-        		result=(result*2) % MOD; // whee, wheee, + e => 가짓수 2배가 된다.
+        		result=(result*2) % MOD; // whee, wheee, + e => 가짓수 2배가 된다
         		result+=e;
         		e+=h;
         	}
