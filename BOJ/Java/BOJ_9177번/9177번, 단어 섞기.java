@@ -38,7 +38,7 @@ public class Main {
         while(!q.isEmpty()){
             Info p = q.poll();
 
-            if(p.x+p.y == c.length){ // 조건에 맞게 섞임
+            if(p.x+p.y == c.length){ // 조건에 맞게 섞임 
                 return "yes";
             }
 
