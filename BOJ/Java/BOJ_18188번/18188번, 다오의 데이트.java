@@ -54,6 +54,7 @@ public class Main {
         Solution(dao.x, dao.y, 0);
 
         System.out.println("NO");
+		
     }
 
     private static void Solution(int x, int y, int cnt) {   
