@@ -23,10 +23,10 @@ public class Main {
 
         Arrays.sort(arr);
 
-        long left = 0, right = arr[0] * m; // arr[n-1]*m = 오버플로우
+        long left=0, right=arr[0] * m; // arr[n-1]*m = 오버플로우 
 
         while(left<=right){
-            long mid = (left+right)/2;
+            long mid=(left+right)/2;
 
             long sum=0;
             for(int i=0; i<n; i++){
