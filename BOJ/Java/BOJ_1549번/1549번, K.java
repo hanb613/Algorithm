@@ -26,7 +26,7 @@ public class Main {
             for(int i=k; i<=n; i++){
                 long sum=0;
                 for(int j=k+i; j<=n; j++){
-                    sum = Math.abs((arr[i]-arr[i-k]) - (arr[j]-arr[j-k]));
+                    sum = Math.abs((arr[i]-arr[i-k])-(arr[j]-arr[j-k]));
                     if(sum<=result){
                         resultK = k;
                         result = sum;
