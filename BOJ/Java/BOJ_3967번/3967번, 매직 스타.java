@@ -4,7 +4,7 @@ import java.io.*;
 public class Main {
 
     static int CNT;
-    static char[]  num;
+    static char[] num;
     static char[][] arr;
     static boolean[] visited;
 
@@ -43,7 +43,7 @@ public class Main {
             for(int i=0; i<6; i++){
                 int sum=0;
                 for(int j=0; j<4; j++){
-                    if(sum>26) return; // 26 넘으면 바로 return
+                    if(sum>26) return; // 합이 26 넘으면 바로 return
                     sum+=(num[sumArr[i][j]]-64); //
                 }
                 if(sum==26) sumCnt++;
@@ -72,7 +72,7 @@ public class Main {
             for(int i=1; i<=12; i++){
                 if(!visited[i]){
                     visited[i]=true;
-                    num[k] = (char) (64+i);
+                    num[k] = (char)(64+i);
                     Solution(k+1, cnt+1);
                     num[k] = 0;
                     visited[i]=false;
