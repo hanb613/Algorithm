@@ -32,7 +32,7 @@ public class Main {
                 right++;
             } else {
             	int num = map.get(str[left])-1;
-                if(num==0){
+                if(num==0){ // 해당 문자 존재 X
                     map.remove(str[left]);
                 } else {
                     map.replace(str[left], num);
