@@ -5,8 +5,8 @@ class Solution {
         for(int i=1; i<=n; i++){
             int sum=0;
             for(int j=i; j<=n; j++){
-                if(sum+j>n) break;
-                if(sum+j==n) {
+                if(sum+j > n) break;
+                if(sum+j == n) {
                     answer++; break;
                 }
                 
