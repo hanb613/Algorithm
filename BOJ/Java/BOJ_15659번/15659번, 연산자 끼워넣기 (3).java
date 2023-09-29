@@ -60,8 +60,7 @@ public class Main {
 
         for (int i=0; i<n-1; i++) {
             switch (cal[i]) {
-                case 0: 
-                case 1:
+                case 0:  case 1:
                     nums.addLast(arr[i+1]);
                 	opers.addLast(cal[i]);
                     break;
