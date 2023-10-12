@@ -25,7 +25,9 @@ public class Main {
 				if(now == '0') { // 현재 위치가 0이면 ? 앞에 1이나 2가 와야됨
 					if(prev=='1' || prev=='2') {
 						dp[i] = dp[i-2] % MOD;
-					} else break;
+					} else {
+						break;
+					}
 				} else {
 					int result = Integer.parseInt(str.substring(i-2, i));
 
