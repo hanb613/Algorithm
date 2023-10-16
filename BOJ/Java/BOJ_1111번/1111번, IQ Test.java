@@ -29,7 +29,7 @@ public class Main {
 		} else {
 			int a, b;
 			
-			if(arr[1]==arr[0]) {
+			if(arr[1]==arr[0]) { // division by zero
 				a = 1; 
 				b = 0;
 			} else {
@@ -37,7 +37,7 @@ public class Main {
 				b = arr[1] - (arr[0]*a);
 			}
 
-			for(int i=0; i<n-1; i++) {
+			for(int i=0; i<n-1; i++) { // 모든 원소가 규칙을 만족하는지 확인
 				if(arr[i+1] != (arr[i]*a)+b) {
 					System.out.println("B");
 					return;
