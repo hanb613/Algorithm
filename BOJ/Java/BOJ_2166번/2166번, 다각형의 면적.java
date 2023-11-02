@@ -32,5 +32,6 @@ public class Main {
         }
 
         System.out.println(String.format("%.1f", Math.abs(a-b) / 2.0));
+		
     }
 }
