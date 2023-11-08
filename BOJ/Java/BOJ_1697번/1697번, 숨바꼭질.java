@@ -20,6 +20,7 @@ public class Main {
     	
     	n = Integer.parseInt(st.nextToken());
     	k = Integer.parseInt(st.nextToken());
+		
     	arr = new int[N+1];
     	visit = new boolean[N+1];
     	
