@@ -8,8 +8,10 @@ import java.util.StringTokenizer;
 /*
  * 앞에 문자를 하나씩 잘라 문자열이 팰린드롬인지 찾기
  * if) 팰린드롬일 경우, 그 문자열 왼쪽에 있는 길이만큼 오른쪽에 붙이면 팰린드롬이 된다.
+ 
  * aabb => aabbaa (6)
- * _ _ bb => _ _ bb _ _ 
+ * _ _ bb => _ _ bb _ _
+ 
  * */
 
 public class Main {
