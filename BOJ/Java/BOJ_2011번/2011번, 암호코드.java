@@ -17,7 +17,7 @@ public class Main {
 		if(str.charAt(0) == '0') {
 			System.out.println(0);
 		} else {
-			dp[0]=dp[1]=1;
+			dp[0] = dp[1] = 1;
 			
 			for(int i=2; i<=str.length(); i++) {
 				char now = str.charAt(i-1);
