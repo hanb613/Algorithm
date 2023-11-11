@@ -13,7 +13,7 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int total =0;
+        int total = 0;
         arr = new int[9];
         for(int i=0; i<9; i++) {
         	arr[i] = Integer.parseInt(br.readLine());
@@ -22,7 +22,7 @@ public class Main {
 
         for(int i=0; i<9; i++) {
         	for(int j=i+1; j<9; j++) {
-        		if(total - arr[i] -arr[j] ==100) {
+        		if(total - arr[i] -arr[j] == 100) {
         			for(int k=0; k<9; k++) {
         	        	if(i==k || j==k) continue;
         	        	System.out.println(arr[k]);
