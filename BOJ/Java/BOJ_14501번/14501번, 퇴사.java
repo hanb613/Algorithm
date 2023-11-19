@@ -9,6 +9,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		n = Integer.parseInt(br.readLine());
+		
 		t = new int[n];
 		p = new int[n];
 		
