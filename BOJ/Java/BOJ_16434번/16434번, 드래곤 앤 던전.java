@@ -26,6 +26,7 @@ public class Main {
         }
 
         long left=1, right=Long.MAX_VALUE-1;
+		
         while(left<=right){
             long mid = (left+right)/2;
 
