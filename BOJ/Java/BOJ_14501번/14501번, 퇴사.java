@@ -18,6 +18,7 @@ public class Main {
 			
 			t[i] = Integer.parseInt(st.nextToken());
 			p[i] = Integer.parseInt(st.nextToken());
+			
 		}
 		
 		Solution(0, 0);
