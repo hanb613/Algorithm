@@ -10,6 +10,7 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 		int b = Integer.parseInt(st.nextToken());
+		
 		int[][] arr = new int[n][m];
 		
 		int maxHeight = 0;
